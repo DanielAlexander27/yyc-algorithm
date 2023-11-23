@@ -22,6 +22,13 @@ def checkRowIsCorrect(numColumns: int, row: List[int]):
 
     assert all (element == 0 or element == 1 for element in row), "Es una matriz booleana, por lo tanto, no puedes ingresar valores distintos de 0 y 1."
 
+    sumTemp:int = 0
+    for element in row:
+        sumTemp = element + sumTemp
+    
+    assert(sumTemp != 0), "Al menos un elemento de la fila debe tener un valor de 1"
+
+
 
 def requestData() -> List[List[int]]:
     numRows = -1

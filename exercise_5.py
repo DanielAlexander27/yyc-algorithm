@@ -41,7 +41,7 @@ def table5withPhi(thetaMatrix, reorderedThetaMatrix):
     for i in range(1, 6):
         print(f"Phi Operador (reordenado) (N = {i}):")
 
-        resultMatrix = operators.phiOperator(reorderedThetaMatrix, nTimes=i)
+        resultMatrix =  reorderMatrixInAscOrder(operators.phiOperator(reorderedThetaMatrix, nTimes=i))   
         typicalTestorsSet = yyc(resultMatrix)
 
         print(f"\tNúmero de Filas: {len(resultMatrix)}")
@@ -51,7 +51,7 @@ def table5withPhi(thetaMatrix, reorderedThetaMatrix):
     print(" ")
 
 def table6withGamma(thetaMatrix, reorderedThetaMatrix):
-    for i in range(1, 6):
+    for i in range(1, 5):
         print(f"Gamma Operador (N = {i}):")
 
         resultMatrix = operators.gammaOperator(thetaMatrix, nTimes=i)
@@ -63,10 +63,10 @@ def table6withGamma(thetaMatrix, reorderedThetaMatrix):
 
     print("\n---------------------------------------------\n")
 
-    for i in range(1, 6):
+    for i in range(1, 5):
         print(f"Gamma Operador (reordenado) (N = {i}):")
 
-        resultMatrix = operators.gammaOperator(reorderedThetaMatrix, nTimes=i)
+        resultMatrix = reorderMatrixInAscOrder(operators.gammaOperator(reorderedThetaMatrix, nTimes=i))    
         typicalTestorsSet = yyc(resultMatrix)
 
         print(f"\tNúmero de Filas: {len(resultMatrix)}")

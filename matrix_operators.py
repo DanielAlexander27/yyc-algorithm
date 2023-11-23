@@ -92,7 +92,7 @@ def phiOperator(matrixA: List[List[int]], matrixB: List[List[int]] = None, nTime
 
     
     # El operador phi trabaja exclusivamente con matrices que tienen el mismo numero de filas
-    assert(len(matrixA) == len(matrixB)), "El número de filas de la matriz A y de la matriz B deben ser iguales."
+    assert(len(matrixA) == len(matrixB)), "El número de filas de la matriz A y de la matriz B deben ser iguales. Prueba con otro operador."
         
     for times in range(0, nTimes):
 
