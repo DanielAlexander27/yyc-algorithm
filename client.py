@@ -2,6 +2,7 @@ from typing import List
 import matrix_operators as operators
 from input_matrix import requestData
 from yyc_implementation import yycAlgorithm
+from exercise_5 import exercise5
 
 def printHeader():
     print("\t\tUNIVERSIDAD SAN FRANCISCO DE QUITO")
@@ -143,12 +144,13 @@ def printMenu():
         print("Escoge una opción:")
         print("\t1. Calcular testores típios de una matriz básica.")
         print("\t2. Aplicar operadores de matriz en dos matrices (A y B)")
-        print("\t3. Salir\n")
+        print("\t3. Visualizar resultado tras aplicar operadores de la Tabla 5 y 6.")
+        print("\t4. Salir\n")
 
         try :
             option = input("\t? ")
             option = int(option)
-            assert(option == 1 or option == 2 or option == 3), "No existe la opción"
+            assert(option >= 1 and option <= 4), "No existe la opción"
 
             match option:
                 case 1:
@@ -156,6 +158,9 @@ def printMenu():
                 case 2:
                     secondOption()
                 case 3:
+                    print("")
+                    exercise5()
+                case 4:
                     print("¡Gracias por usar el programa!")
                     break
 
